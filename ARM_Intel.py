@@ -466,6 +466,7 @@ def main(count, limit):
 
     while count <= limit:
         sce=[ARM1,ARM2,ARM3,ARM4,ARM5,ARM6,ARM7,ARM8,ARM9,ARM10,ARM11][:count]
+        sce_les=les_from_scenarios(sce)
         print("Number of partial orders: %s" %count)
         print("Complexity of set of LPOs: %s" %(len(sce_les["events"])+len(sce_les["cau"])))
         op_les=optimize(sce_les)
